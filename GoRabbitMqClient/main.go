@@ -34,6 +34,8 @@ func main() {
 		false,
 	)
 
+	failOnError(err, "Could not Set Qos for a channel.")
+
 	msgs, err := ch.Consume(
 		q.Name,
 		"",
